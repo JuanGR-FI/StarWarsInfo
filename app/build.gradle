@@ -37,6 +37,9 @@ android {
 
 dependencies {
 
+    def retrofitVersion = '2.9.0'
+    def glideVersion = '4.14.2'
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
@@ -44,6 +47,11 @@ dependencies {
 
     //Para gifs animados
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
+
+    //Para consumir datos de una API REST
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
