@@ -13,9 +13,9 @@ interface CharactersApi {
         @Url url: String?
     ): Call<CharacterDetail>
 
-    @GET("planets/{id}/")
+    @GET
     fun getPlanetDetail(
-        @Path("id") id: String?
+        @Url url: String?
     ): Call<PlanetDetail>
 
     @GET("films/{id}/")

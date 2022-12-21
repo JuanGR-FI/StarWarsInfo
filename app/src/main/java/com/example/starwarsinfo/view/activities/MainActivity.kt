@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         CoroutineScope(Dispatchers.IO).launch {
-            val call = Constants.getRetrofit().create(CharactersApi::class.java).getCharacters("api/people/")
+            val call = Constants.getRetrofit().create(CharactersApi::class.java).getCharacters("people/")
             call.enqueue(object: Callback<CharacterDetail>{
                 override fun onResponse(
                     call: Call<CharacterDetail>,
@@ -68,11 +68,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun selectedPlanet(character: Character) {
-        val planetID = character.homeworld?.get((character.homeworld?.length)?.minus(2) ?: 1)
+        //val planetID = character.homeworld?.get((character.homeworld?.length)?.minus(2) ?: 1)
+        val planetID = character.homeworld!!.substring(22,  character.homeworld!!.length-1)
         Toast.makeText(this@MainActivity, "ID del planeta: ${planetID}", Toast.LENGTH_SHORT).show()
         val parametros = Bundle()
         parametros.apply {
-            putString("id", planetID.toString())
+            putString("id", planetID)
         }
 
         val intent = Intent(this@MainActivity, PlanetDetails::class.java)
