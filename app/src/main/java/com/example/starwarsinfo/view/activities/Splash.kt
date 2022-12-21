@@ -1,9 +1,10 @@
-package com.example.starwarsinfo
+package com.example.starwarsinfo.view.activities
 
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.starwarsinfo.R
 import com.example.starwarsinfo.databinding.ActivitySplashBinding
 import kotlin.concurrent.thread
 
