@@ -85,6 +85,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun selectedFilms(character: Character) {
+        val parametros = Bundle()
+        parametros.apply {
+            putStringArrayList("filmsurls", character.films)
+        }
 
+        val intent = Intent(this@MainActivity, FilmsDetail::class.java)
+
+        intent.putExtras(parametros)
+
+        startActivity(intent)
     }
 }

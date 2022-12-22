@@ -28,16 +28,10 @@ class Adapter(private val contexto: Context, private val characters: CharacterDe
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvName.text = characters.results[position].name
-        holder.tvHeight.text = characters.results[position].height
-        holder.tvBirth.text = characters.results[position].birth_year
-        holder.tvGender.text = characters.results[position].gender
+        holder.tvHeight.text = "H: " + characters.results[position].height
+        holder.tvBirth.text = "BY: " + characters.results[position].birth_year
+        holder.tvGender.text = "G: " + characters.results[position].gender
 
-        /*holder.itemView.setOnClickListener {
-            if(contexto is MainActivity) contexto
-            Glide.with(this@Details)
-                            .load(response.body()?.image)
-                            .into(ivImage)
-        }*/
         var tmpThumbnail = ""
         if(characters.results[position].name.equals("Luke Skywalker")){
            tmpThumbnail = "https://i.pinimg.com/564x/f5/7e/db/f57edba0746f7db9567f0a50ba3427b6.jpg"
