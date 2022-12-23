@@ -22,7 +22,7 @@ class Splash : AppCompatActivity() {
         mp.start()
 
         thread{
-            Thread.sleep(3000)
+            Thread.sleep(3500)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             Animatoo.animateSlideUp(this@Splash)
