@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">StarWarsInfo</string>
+    <string name="appversion">Version 1.0</string>
+    <string name="developer">©CervantesJuan</string>
+    <string name="btnplanet">Planet</string>
+    <string name="btnfilms">Films</string>
+    <string name="btnreload">Reload</string>
+    <string name="height">H: %s</string>
+    <string name="birthyear">BY: %s</string>
+    <string name="gender">G: %s</string>
+    <string name="director">Director: %s</string>
+    <string name="producer">Producer: %s</string>
+    <string name="release_date">Release Date: %s</string>
+    <string name="rotation_period">Rotation Period: %s</string>
+    <string name="orbital_period">Orbital Period: %s</string>
+    <string name="diameter">Diameter: %s</string>
+    <string name="climate">Climate: %s</string>
+    <string name="terrain">Terrain: %s</string>
+    <string name="population">Population: %s</string>
+    <string name="connection_error">CONNECTION ERROR: %s</string>
 </resources>

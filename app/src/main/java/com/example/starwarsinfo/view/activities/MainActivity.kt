@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
+import com.example.starwarsinfo.R
 import com.example.starwarsinfo.databinding.ActivityMainBinding
 import com.example.starwarsinfo.model.Character
 import com.example.starwarsinfo.model.CharacterDetail
@@ -28,49 +30,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        CoroutineScope(Dispatchers.IO).launch {
-            val call = Constants.getRetrofit().create(CharactersApi::class.java).getCharacters("people/")
-            call.enqueue(object: Callback<CharacterDetail>{
-                override fun onResponse(
-                    call: Call<CharacterDetail>,
-                    response: Response<CharacterDetail>
-                ) {
-                    Log.d(Constants.LOGTAG, "Respuesta del servidor: ${response.toString()}")
-                    Log.d(Constants.LOGTAG, "Datos: ${response.body().toString()}")
-
-                    /*val characterTmp: Character
-                    for(characterTmp in response.body()!!.results)
-                        Toast.makeText(this@MainActivity, "Nombre del personaje: ${characterTmp.name}", Toast.LENGTH_SHORT).show()*/
-
-                    binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
-                    binding.rvMenu.adapter = Adapter(this@MainActivity, response.body()!!)
-
-                    binding.pbConexion.visibility = View.GONE
-                    binding.ivError.visibility = View.INVISIBLE
-
-
-                }
-
-                override fun onFailure(call: Call<CharacterDetail>, t: Throwable) {
-                    binding.pbConexion.visibility = View.GONE
-                    binding.ivError.visibility = View.VISIBLE
-                    Toast.makeText(this@MainActivity, "Error de conexión: ${t.message}", Toast.LENGTH_SHORT).show()
-
-
-                }
-
-            })
-        }
-
-
-
+        tryConnection()
 
     }
 
     fun selectedPlanet(character: Character) {
-        //val planetID = character.homeworld?.get((character.homeworld?.length)?.minus(2) ?: 1)
-        val planetID = character.homeworld!!.substring(22,  character.homeworld!!.length-1)
-        Toast.makeText(this@MainActivity, "ID del planeta: ${planetID}", Toast.LENGTH_SHORT).show()
+        val planetID = character.homeworld!!.substring(22,  character.homeworld.length-1)
+        //Toast.makeText(this@MainActivity, "ID del planeta: $planetID", Toast.LENGTH_SHORT).show()
         val parametros = Bundle()
         parametros.apply {
             putString("id", planetID)
@@ -81,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         intent.putExtras(parametros)
 
         startActivity(intent)
+
+        Animatoo.animateSlideRight(this@MainActivity)
 
     }
 
@@ -95,5 +63,52 @@ class MainActivity : AppCompatActivity() {
         intent.putExtras(parametros)
 
         startActivity(intent)
+
+        Animatoo.animateSlideLeft(this@MainActivity)
     }
+
+    fun reloadConnection(view: View) {
+        binding.ivError.visibility = View.GONE
+        view.visibility = View.GONE
+
+        binding.pbConexion.visibility = View.VISIBLE
+
+        tryConnection()
+    }
+
+    private fun tryConnection(){
+        CoroutineScope(Dispatchers.IO).launch {
+            val call = Constants.getRetrofit().create(CharactersApi::class.java).getCharacters(Constants.CHARACTERS_URL)
+            call.enqueue(object: Callback<CharacterDetail>{
+                override fun onResponse(
+                    call: Call<CharacterDetail>,
+                    response: Response<CharacterDetail>
+                ) {
+                    Log.d(Constants.LOGTAG, "Respuesta del servidor: $response")
+                    Log.d(Constants.LOGTAG, "Datos: ${response.body().toString()}")
+
+                    binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
+                    binding.rvMenu.adapter = Adapter(this@MainActivity, response.body()!!)
+
+                    binding.pbConexion.visibility = View.GONE
+                    binding.ivError.visibility = View.INVISIBLE
+                    binding.btnReload.visibility = View.INVISIBLE
+
+
+                }
+
+                override fun onFailure(call: Call<CharacterDetail>, t: Throwable) {
+                    binding.pbConexion.visibility = View.GONE
+                    binding.ivError.visibility = View.VISIBLE
+                    binding.btnReload.visibility = View.VISIBLE
+
+                    Toast.makeText(this@MainActivity, getString(R.string.connection_error, t.message), Toast.LENGTH_SHORT).show()
+
+
+                }
+
+            })
+        }
+    }
+
 }

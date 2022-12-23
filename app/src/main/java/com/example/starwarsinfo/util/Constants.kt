@@ -5,6 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object Constants {
     const val BASE_URL = "https://swapi.dev/api/"
+    const val CHARACTERS_URL = "people/"
+    const val FILMS_URL = "films/"
     const val LOGTAG = "LOGS"
 
     fun getRetrofit(): Retrofit = Retrofit.Builder()

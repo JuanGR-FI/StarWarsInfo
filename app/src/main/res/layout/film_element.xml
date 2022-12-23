@@ -91,16 +91,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bowlby_one_sc"
         android:includeFontPadding="false"
         android:paddingTop="8dp"
-        android:fontFamily="@font/bowlby_one_sc"
-        tools:text="Title"
-        android:textColor="#CBD5ED"
+        android:textColor="#F3DC74"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/tvDirector"
@@ -108,16 +108,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bowlby_one_sc"
         android:includeFontPadding="false"
         android:paddingTop="8dp"
-        android:fontFamily="@font/bowlby_one_sc"
-        tools:text="Director"
-        android:textColor="#E03F3F"
-        android:textSize="12sp"
+        android:textColor="#A9E19F"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline14" />
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
+        tools:text="Director" />
 
     <TextView
         android:id="@+id/tvProducer"
@@ -125,16 +125,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bowlby_one_sc"
         android:includeFontPadding="false"
         android:paddingTop="8dp"
-        android:fontFamily="@font/bowlby_one_sc"
-        tools:text="Producer"
-        android:textColor="#BD3FE0"
-        android:textSize="12sp"
+        android:textColor="#9FE1D4"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        tools:text="Producer" />
 
     <TextView
         android:id="@+id/tvDate"
@@ -142,16 +142,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bowlby_one_sc"
         android:includeFontPadding="false"
         android:paddingTop="8dp"
-        android:fontFamily="@font/bowlby_one_sc"
-        tools:text="Release Date"
-        android:textColor="#F5DC53"
-        android:textSize="14sp"
+        android:textColor="#9FAAE1"
+        android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline16" />
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
+        tools:text="Release Date" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,7 @@
                     android:fontFamily="@font/bowlby_one_sc"
                     android:gravity="center_horizontal"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#74F3C7"
                     android:textSize="25sp"
                     tools:text="Planet Name" />
 
@@ -56,7 +56,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#DC9FE1"
                     android:textSize="20sp"
                     tools:text="Rotation Period: " />
 
@@ -69,7 +69,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#AB9FE1"
                     android:textSize="20sp"
                     tools:text="Orbital Period: " />
 
@@ -82,7 +82,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#9FCAE1"
                     android:textSize="20sp"
                     tools:text="Diameter: " />
 
@@ -95,7 +95,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#A3E19F"
                     android:textSize="20sp"
                     tools:text="Climate: " />
 
@@ -108,7 +108,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#E1D69F"
                     android:textSize="20sp"
                     tools:text="Terrain: " />
 
@@ -121,24 +121,9 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="#E19F9F"
                     android:textSize="20sp"
                     tools:text="Population: " />
-
-                <Button
-                    android:id="@+id/btnBack"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#303030"
-                    android:fontFamily="@font/bowlby_one_sc"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:text="Back"
-                    android:visibility="invisible"
-                    />
 
             </LinearLayout>
         </ScrollView>
@@ -150,19 +135,36 @@
             android:layout_height="40dp"
             android:layout_centerInParent="true" />
 
-        <ImageView
-            android:id="@+id/ivError"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/errorimage"
-            android:visibility="invisible"
-            />
 
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivError"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/errorimage"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnReload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#303030"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:gravity="center_horizontal"
+        android:onClick="reloadConnection"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/btnreload"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/ivError" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

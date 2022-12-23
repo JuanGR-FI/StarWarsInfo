@@ -48,6 +48,9 @@ dependencies {
     //Para gifs animados
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
 
+    //Para transiciones
+    implementation 'com.github.AtifSayings:Animatoo:1.0.1'
+
     //Para consumir datos de una API REST
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"

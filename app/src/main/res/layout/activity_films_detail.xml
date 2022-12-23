@@ -29,6 +29,22 @@
         android:visibility="invisible"
         />
 
+    <Button
+        android:id="@+id/btnReload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#303030"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:gravity="center_horizontal"
+        android:onClick="reloadConnection"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/btnreload"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/ivError" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMenu"
