@@ -7,4 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background">#151515</color>
+    <color name="btnColor">#303030</color>
+    <color name="characterYellow">#E1D89F</color>
+    <color name="characterRed">#E19F9F</color>
+    <color name="characterPink">#DC9FE1</color>
+    <color name="characterBlue">#CBD5ED</color>
+    <color name="planetCyan">#74F3C7</color>
+    <color name="planetPurple">#AB9FE1</color>
+    <color name="planetBlue">#9FCAE1</color>
+    <color name="planetGreen">#A3E19F</color>
+    <color name="planetYellow">#E1D69F</color>
+    <color name="appTitleYellow">#FFEB3B</color>
+    <color name="filmsYellow">#F3DC74</color>
+    <color name="filmsGreen">#A9E19F</color>
+    <color name="filmsCyan">#9FE1D4</color>
+    <color name="filmsBlue">#9FAAE1</color>
+
 </resources>

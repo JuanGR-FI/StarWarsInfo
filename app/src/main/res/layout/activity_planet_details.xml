@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#151515"
+    android:background="@color/background"
     tools:context=".view.activities.PlanetDetails">
 
     <RelativeLayout
@@ -34,7 +34,7 @@
                     android:fontFamily="@font/bowlby_one_sc"
                     android:gravity="center_horizontal"
                     android:paddingBottom="10dp"
-                    android:textColor="#74F3C7"
+                    android:textColor="@color/planetCyan"
                     android:textSize="25sp"
                     tools:text="Planet Name" />
 
@@ -56,7 +56,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#DC9FE1"
+                    android:textColor="@color/characterPink"
                     android:textSize="20sp"
                     tools:text="Rotation Period: " />
 
@@ -69,7 +69,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#AB9FE1"
+                    android:textColor="@color/planetPurple"
                     android:textSize="20sp"
                     tools:text="Orbital Period: " />
 
@@ -82,7 +82,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#9FCAE1"
+                    android:textColor="@color/planetBlue"
                     android:textSize="20sp"
                     tools:text="Diameter: " />
 
@@ -95,7 +95,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#A3E19F"
+                    android:textColor="@color/planetGreen"
                     android:textSize="20sp"
                     tools:text="Climate: " />
 
@@ -108,7 +108,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#E1D69F"
+                    android:textColor="@color/planetYellow"
                     android:textSize="20sp"
                     tools:text="Terrain: " />
 
@@ -121,7 +121,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
-                    android:textColor="#E19F9F"
+                    android:textColor="@color/characterRed"
                     android:textSize="20sp"
                     tools:text="Population: " />
 
@@ -154,7 +154,7 @@
         android:id="@+id/btnReload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#303030"
+        android:backgroundTint="@color/btnColor"
         android:fontFamily="@font/bowlby_one_sc"
         android:gravity="center_horizontal"
         android:onClick="reloadConnection"

@@ -27,7 +27,7 @@
         android:fontFamily="@font/bowlby_one_sc"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="#FFEB3B"
+        android:textColor="@color/appTitleYellow"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/gifImageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/bowlby_one_sc"
         android:text="@string/appversion"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/tvDeveloper"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -56,7 +56,7 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/bowlby_one_sc"
         android:text="@string/developer"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

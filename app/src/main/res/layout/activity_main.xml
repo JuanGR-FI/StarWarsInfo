@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#151515"
+    android:background="@color/background"
     tools:context=".view.activities.MainActivity">
 
     <ProgressBar
@@ -33,7 +33,7 @@
         android:id="@+id/btnReload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#303030"
+        android:backgroundTint="@color/btnColor"
         android:fontFamily="@font/bowlby_one_sc"
         android:gravity="center_horizontal"
         android:onClick="reloadConnection"
